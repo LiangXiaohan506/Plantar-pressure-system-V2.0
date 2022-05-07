@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 曲阜师范大学工学院, 123, LIC=1WSKC-7I4ZH-E06N4-F0U4E-IDFAZ-JUKW8
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.35.0.2
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.40.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+D:\TEST\MDK-ARM\TEST.uvprojx
+Project File Date:  02/22/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'TEST'
+assembling startup_stm32f103xb.s...
+compiling gpio.c...
+compiling adc.c...
+compiling oled.c...
+compiling mpu6050.c...
+compiling main.c...
+../Core/Src/main.c(231): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOA, R_A_Pin, Row_A[0]);
+../Core/Src/main.c(232): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOA, R_B_Pin, Row_B[0]);
+../Core/Src/main.c(233): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOA, R_C_Pin, Row_C[0]);
+../Core/Src/main.c(234): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOA, R_D_Pin, Row_D[0]);
+../Core/Src/main.c(269): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  	if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)
+../Core/Src/main.c(269): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  	if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)
+../Core/Src/main.c(269): warning:  #167-D: argument of type "volatile float *" is incompatible with parameter of type "float *"
+  	if(mpu_dmp_get_data(&pitch,&roll,&yaw)==0)
+../Core/Src/main.c: 7 warnings, 0 errors
+compiling inv_mpu_dmp_motion_driver.c...
+compiling inv_mpu.c...
+..\Core\Src\inv_mpu.c(844): warning:  #223-D: function "memset" declared implicitly
+      memset(&st.chip_cfg.cache, 0, sizeof(st.chip_cfg.cache));
+..\Core\Src\inv_mpu.c(1936): warning:  #223-D: function "labs" declared implicitly
+          st_shift_cust = labs(bias_regular[jj] - bias_st[jj]) / 65536.f;
+..\Core\Src\inv_mpu.c(1964): warning:  #223-D: function "labs" declared implicitly
+          st_shift_cust = labs(bias_regular[jj] - bias_st[jj]) / 65536.f;
+..\Core\Src\inv_mpu.c(2363): warning:  #223-D: function "memcmp" declared implicitly
+          if (memcmp(firmware+ii, cur, this_write))
+..\Core\Src\inv_mpu.c(3015): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\inv_mpu.c: 5 warnings, 0 errors
+compiling i2c.c...
+compiling stm32f1xx_hal_msp.c...
+compiling tim.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling dma.c...
+compiling usart.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_adc_ex.c...
+compiling stm32f1xx_hal_adc.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_i2c.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_uart.c...
+linking...
+Program Size: Code=27574 RO-data=10314 RW-data=156 ZI-data=3148  
+FromELF: creating hex file...
+"TEST\TEST.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.1.0.pack
+                Keil.STM32F1xx_DFP.2.1.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_TEST
+  D:\Keil_v5\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\Keil_v5\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Build Time Elapsed:  00:00:18
+</pre>
+</body>
+</html>
