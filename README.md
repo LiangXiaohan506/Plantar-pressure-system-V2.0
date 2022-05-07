@@ -8,3 +8,5 @@ DMA多通道读取ADC
 串口配置  
 定时器配置  
 ## 硬件部分
+<img src="https://github.com/LiangXiaohan506/Plantar-pressure-system-v2.0/blob/main/%E7%94%B5%E8%B7%AF%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" width="320" height="426" alt="电路板正面">  
+
